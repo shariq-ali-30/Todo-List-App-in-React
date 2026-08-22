@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+    /* Main */
+    --body-bg: #f8fafc;
+    --primary-color: #16a34a;
+    --primary-hover: #15803d;
+
+    /* Text */
+    --text-primary: #111827;
+    --text-secondary: #6b7280;
+    --text-muted: #9ca3af;
+
+    /* Surfaces */
+    --card-bg: #ffffff;
+    --input-bg: #ffffff;
+
+    /* Borders */
+    --card-border: 1px solid #e5e7eb;
+    --input-border: 1.5px solid #e5e7eb;
+
+    /* Task */
+    --task-bg: #ffffff;
+    --task-completed-text: #6b7280;
+    --checkbox-border: 1px solid #9ca3af;
+    --checkbox-checked: #16a34a;
+
+    /* Buttons */
+    --add-task-bg: #16a34a;
+    --add-task-hover: #15803d;
+    --button-text: #ffffff;
+
+    /* Icons */
+    --edit-icon-color: #374151;
+    --edit-icon-hover: #111827;
+    --delete-icon-color: #dc2626;
+    --delete-icon-hover: #b91c1c;
+    --search-icon-color: #6b7280;
+
+    /* Filters */
+    --filter-active-bg: #16a34a;
+    --filter-active-text: #ffffff;
+    --filter-text: #374151;
+
+    /* Clear Completed */
+    --clear-completed-color: #dc2626;
+    --clear-completed-hover: #b91c1c;
+
+    /* Shadows */
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.filters button.active {
+    background-color: var(--primary-color);
+    color: #fff;
+    transition: all 0.2s ease;
+}
