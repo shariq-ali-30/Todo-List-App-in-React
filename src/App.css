@@ -50,8 +50,65 @@
     --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 .filters button.active {
     background-color: var(--primary-color);
     color: #fff;
     transition: all 0.2s ease;
+}
+
+.input-box input:focus {
+    border-color: var(--primary-color);
+    transition: border 0.2s ease;
+}
+
+/* .todo-list-container {
+    scrollbar-color: var(--primary-color) transparent;
+} */
+
+/* Chrome, Edge, Safari */
+.todo-list-container::-webkit-scrollbar {
+    width: 3px;
+}
+
+.todo-list-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    margin: 4px 0;
+    border-radius: 999px;
+}
+
+.todo-list-container::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 999px;
+}
+
+.todo-list-container::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-hover);
+}
+
+@media (min-width: 1500px) {
+    .container {
+        height: 700px;
+        max-width: 900px;
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    * {
+        cursor: default;
+    }
+
+    .main {
+        padding: 0;
+    }
+
+    .container {
+        height: 100vh;
+        padding: 16px 12px;
+    }
 }

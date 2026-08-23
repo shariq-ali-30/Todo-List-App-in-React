@@ -4,9 +4,9 @@ const InputBox = () => {
       <input
         type="text"
         placeholder="What needs to be done?"
-        className="bg-white flex-1 h-[45px] outline-none [border:var(--input-border)] rounded-[5px] text-[14px] pl-3"
+        className="bg-white flex-1 h-[45px] outline-none [border:var(--input-border)] rounded-[5px] text-[14px] px-3"
       />
-      <button className="bg-[var(--add-task-bg)] text-white px-5 h-[45px] rounded-[5px] text-[14px]">
+      <button className="bg-[var(--add-task-bg)] text-white px-5 h-[45px] rounded-[5px] text-[14px] cursor-pointer">
         Add Task
       </button>
     </form>
