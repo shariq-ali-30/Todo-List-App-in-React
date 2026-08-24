@@ -1,6 +1,6 @@
 const FilterSection = () => {
   return (
-    <section className="filters-section flex justify-between items-center whitespace-nowrap gap-2">
+    <section className="filters-section flex justify-between items-center whitespace-nowrap gap-4">
       <div className="filters flex gap-2">
         <button
           className={`active px-4 bg-white text-[var(--primary-color)] border-[1.5px] border-[var(--primary-color)] text-[14px] h-[35px] font-semibold rounded-[5px] cursor-pointer`}

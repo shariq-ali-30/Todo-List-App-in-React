@@ -66,11 +66,6 @@ body {
     transition: border 0.2s ease;
 }
 
-/* .todo-list-container {
-    scrollbar-color: var(--primary-color) transparent;
-} */
-
-/* Chrome, Edge, Safari */
 .todo-list-container::-webkit-scrollbar {
     width: 3px;
 }
@@ -110,5 +105,21 @@ body {
     .container {
         height: 100vh;
         padding: 16px 12px;
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+    }
+
+    .input-box {
+        padding: 0;
+        border: none;
+    }
+
+    .filters-section {
+        flex-wrap: wrap-reverse;
+    }
+
+    .search-input {
+        width: 100%;
     }
 }
