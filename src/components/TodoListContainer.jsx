@@ -1,30 +1,59 @@
 import React from "react";
 
-const TodoListContainer = () => {
+const TodoListContainer = ({todos, setTodos, inputVal}) => {
+
+  function deleteTodo(id) {
+     setTodos(todos.filter(t => t.id !== id))
+  }
+
+  function editTodo(id) {
+    let todo = todos.find(t => t.id == id)
+
+    todo = {
+      ...prev,
+      title: inputVal
+    }
+  }
+
   return (
-    <div className="todo-list-container overflow-y-auto [border:var(--card-border)] flex-1 min-h-0 min-w-0 mt-4 rounded-[8px]">
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
+    <div className="todo-list-container overflow-y-auto [border:var(--card-border)] flex-1 min-h-0 min-w-0 mt-[clamp(0.8rem,2vw,1rem)] rounded-[clamp(4px,1vw,8px)]">
+      {todos.map((item) => (
+        <TodoItem key={item.id} id={item.id} title={item.title} completed={item.completed} deleteTodo={deleteTodo} />
+      ))}
+
+      {!todos.length > 0 && (
+        <div className="flex flex-col items-center justify-center p-6 text-center h-full">
+          <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
+            <i className="ph ph-clipboard-text text-[clamp(2rem,4vw,2.25rem)]"></i>
+          </div>
+
+          <h3 className="text-base font-semibold text-gray-800">
+            No tasks found
+          </h3>
+          <p className="text-sm text-gray-500 mt-1 max-w-xs">
+            Add a new task above to get started and keep track of your work.
+          </p>
+        </div>
+      )}
     </div>
   );
 };
 
 export default TodoListContainer;
 
-const TodoItem = () => {
+const TodoItem = ({id ,title, completed, deleteTodo}) => {
   return (
-    <div className="todo-item flex justify-between items-center p-4 [border-bottom:var(--card-border)]">
-      <div className="left flex gap-3 items-center">
+    <div className="todo-item flex justify-between items-center p-[clamp(0.8rem,2vw,1rem)] [border-bottom:var(--card-border)]">
+      <div className="left flex gap-[clamp(0.5rem,1.5vw,0.75rem)] items-center">
         <input
           type="checkbox"
-          className="h-[20px] w-[20px] cursor-pointer accent-[var(--primary-color)]"
+          className="h-[clamp(16px,2vw,20px)] w-[clamp(16px,2vw,20px)] cursor-pointer accent-[var(--primary-color)]"
         />
-        <p className="text-[17px]">Complete React Todo App</p>
+        <p className={`text-[clamp(14px,1.8vw,17px)] ${completed ? "line-through text-gray-500" : ""}`}>{title}</p>
       </div>
-      <div className="buttons flex gap-3">
-        <i className="ph ph-pencil-simple text-[var(--edit-icon-color)] text-[19px] [border:var(--input-border)] h-[35px] w-[35px] flex items-center justify-center rounded-[4px] cursor-pointer"></i>
-        <i className="ph ph-trash text-[var(--delete-icon-color)] text-[19px] [border:var(--input-border)] h-[35px] w-[35px] flex items-center justify-center rounded-[4px] cursor-pointer"></i>
+      <div className="buttons flex gap-[clamp(0.5rem,1.5vw,0.75rem)]">
+        <i onClick={() => editTodo(id)} className="ph ph-pencil-simple text-[var(--edit-icon-color)] text-[clamp(15px,2vw,19px)] [border:var(--input-border)] h-[clamp(28px,3.5vh,35px)] w-[clamp(28px,3.5vh,35px)] flex items-center justify-center rounded-[clamp(4px,0.5vw,4px)] cursor-pointer"></i>
+        <i onClick={() => deleteTodo(id)} className="ph ph-trash text-[var(--delete-icon-color)] text-[clamp(15px,2vw,19px)] [border:var(--input-border)] h-[clamp(28px,3.5vh,35px)] w-[clamp(28px,3.5vh,35px)] flex items-center justify-center rounded-[clamp(4px,0.5vw,4px)] cursor-pointer"></i>
       </div>
     </div>
   );

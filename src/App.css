@@ -116,7 +116,7 @@ body {
     }
 
     .filters-section {
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
     }
 
     .search-input {
