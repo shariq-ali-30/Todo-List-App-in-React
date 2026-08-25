@@ -8,10 +8,10 @@ const FilterSection = ({todos}) => {
           All ({todos.length})
         </button>
         <button className="px-[clamp(0.5rem,1.5vw,1rem)] bg-white text-[var(--primary-color)] border-[clamp(1px,0.2vw,1.5px)] border-[var(--primary-color)] text-[clamp(12px,1.5vw,14px)] h-[clamp(30px,4vh,35px)] font-semibold rounded-[clamp(3px,0.8vw,5px)] cursor-pointer">
-          Pending (0)
+          Pending ({todos.filter(todo => !todo.completed).length})
         </button>
         <button className="px-[clamp(0.5rem,1.5vw,1rem)] bg-white text-[var(--primary-color)] border-[clamp(1px,0.2vw,1.5px)] border-[var(--primary-color)] text-[clamp(12px,1.5vw,14px)] h-[clamp(30px,4vh,35px)] font-semibold rounded-[clamp(3px,0.8vw,5px)] cursor-pointer">
-          Completed (0)
+          Completed ({todos.filter(todo => todo.completed).length})
         </button>
       </div>
       <div className="search-input w-[clamp(180px,30vw,300px)] h-[clamp(38px,4vh,40px)] relative">
