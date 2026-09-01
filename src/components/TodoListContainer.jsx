@@ -1,6 +1,6 @@
 import React from "react";
 
-const TodoListContainer = ({todos, setTodos, inputVal, setInputVal, setEditMode, markCompleted}) => {
+const TodoListContainer = ({todos, filterdTodos, setTodos, setInputVal, setEditMode, markCompleted}) => {
 
   function deleteTodo(id) {
      setTodos(todos.filter(t => t.id !== id))
@@ -8,11 +8,11 @@ const TodoListContainer = ({todos, setTodos, inputVal, setInputVal, setEditMode,
 
   return (
     <div className="todo-list-container overflow-y-auto [border:var(--card-border)] flex-1 min-h-0 min-w-0 mt-[clamp(0.8rem,2vw,1rem)] rounded-[clamp(4px,1vw,8px)]">
-      {todos.map((item) => (
+      {filterdTodos.map((item) => (
         <TodoItem key={item.id} id={item.id} title={item.title} completed={item.completed} deleteTodo={deleteTodo} setEditMode={setEditMode} setInputVal={setInputVal} markCompleted={markCompleted}/>
       ))}
 
-      {!todos.length > 0 && (
+      {!filterdTodos.length > 0 && (
         <div className="flex flex-col items-center justify-center p-6 text-center h-full">
           <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
             <i className="ph ph-clipboard-text text-[clamp(2rem,4vw,2.25rem)]"></i>
