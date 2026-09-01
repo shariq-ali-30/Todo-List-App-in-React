@@ -45,7 +45,7 @@ function App() {
     e.preventDefault();
 
     if (!inputVal.trim()) {
-      return showToast("error", "")
+      return showToast("error", "Please enter your task!")
     }
 
     if (editMode) {
