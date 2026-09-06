@@ -1,16 +1,55 @@
-# React + Vite
+# Todo List App in React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About The Project
 
-Currently, two official plugins are available:
+This project is a Todo List App built using React.js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The purpose of this assignment was to practice React fundamentals, component-based architecture, state management, event handling, Local Storage, filtering, searching, and dynamic UI updates by creating an interactive task management application.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React.js
+- JavaScript (ES6)
+- HTML5
+- CSS3
+- Vite
+- Tailwind CSS
+- Phosphor Icons
+- Local Storage
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Add new tasks
+- Edit existing tasks
+- Mark tasks as completed or pending
+- Delete tasks
+- Search tasks by title
+- Filter tasks by All, Pending, and Completed status
+- Prevent duplicate tasks
+- Input validation for empty tasks
+- Store tasks in Local Storage
+- Persist tasks after page refresh
+- Toast notifications for success and error messages
+- Dynamic task count and filtering
+- Component-based project structure
+- Responsive and clean user interface
+- Dynamic UI updates using React state
+
+## What I Learned
+
+Through this assignment, I learned:
+
+- How to create reusable React components
+- How to manage state using the `useState` hook
+- How to use `useEffect` for side effects
+- How to store and retrieve data using Local Storage
+- How to implement CRUD operations in React
+- How to search and filter data dynamically
+- How to handle form submissions and user events
+- How to pass data and functions between components using props
+- How to create dynamic and interactive user interfaces
+- How to organize a React application into reusable components
+
+## Author
+
+**Shariq Ali**
