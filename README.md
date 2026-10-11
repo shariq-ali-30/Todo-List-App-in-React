@@ -35,21 +35,6 @@ The purpose of this assignment was to practice React fundamentals, component-bas
 - Responsive and clean user interface
 - Dynamic UI updates using React state
 
-## What I Learned
-
-Through this assignment, I learned:
-
-- How to create reusable React components
-- How to manage state using the `useState` hook
-- How to use `useEffect` for side effects
-- How to store and retrieve data using Local Storage
-- How to implement CRUD operations in React
-- How to search and filter data dynamically
-- How to handle form submissions and user events
-- How to pass data and functions between components using props
-- How to create dynamic and interactive user interfaces
-- How to organize a React application into reusable components
-
 ## Author
 
 **Shariq Ali**
